@@ -2,7 +2,11 @@
 	"name": "ninja-recipe-shadcnui",
 	"private": true,
 	"version": "0.0.0",
-	"type": "module",
+	"description": "Ninja Recipe series to learn Shadcn UI in React.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ClaudiusAyadi/ninja-recipe-shadcnui.git"
+	},
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc -b && vite build",
@@ -38,5 +42,19 @@
 		"typescript": "~5.6.3",
 		"typescript-eslint": "^8.18.1",
 		"vite": "^6.0.5"
-	}
+	},
+	"keywords": [
+		"typescript",
+		"react",
+		"vite",
+		"tailwindcss",
+		"shadcnui"
+	],
+	"author": {
+		"name": "Claudius A.",
+		"email": "hello@claudiusa.xyz",
+		"url": "https://claudiusa.xyz"
+	},
+	"license": "MIT"
 }
+

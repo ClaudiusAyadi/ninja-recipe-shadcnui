@@ -1,50 +1,44 @@
-# React + TypeScript + Vite
+# Ninja Recipe React.js + Shadcn UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a recipe application built with React, TypeScript, and Vite. It uses Shadcn UI components and Tailwind CSS for styling.
 
-Currently, two official plugins are available:
+It is a very simple and minimal web app focusing on learning Shadcn UI instead of functionality.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
+- [Previews](#previews)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Available Scripts](#available-scripts)
+- [Dependencies](#dependencies)
+- [Expanding the ESLint Configuration](#expanding-the-eslint-configuration)
 
-## Expanding the ESLint configuration
+## Previews
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### PC
 
-- Configure the top-level `parserOptions` property like this:
+![Ninja Recipe React.js + Shadcn UI - PC](/public/img/Ninja_Recipe_React.js_Shad_UI.png)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### MOBILE
+
+![Ninja Recipe React.js + Shadcn UI - mobile](/public/img/Ninja_Recipe_React.js_Shad_UI_mobile.png)
+
+
+## Getting Started
+
+To get started with this project, clone the repository and install the dependencies:
+
+```sh
+git clone <repository-url>
+cd ninja-recipe-shadcnui
+pnpm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Then, you can start the development server:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```sh
+pnpm dev
 ```
+
+## License
+
+This project is open-source and available under the MIT License.
