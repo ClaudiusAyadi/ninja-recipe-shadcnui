@@ -1,19 +1,19 @@
 import { Recipe } from './types';
 import { useEffect, useState } from 'react';
-import Header from './Header';
-import Loading from './Loading';
-import RecipeList from './components/RecipeList';
+import { Header, Loader, RecipeList } from './components/';
 
-const uri = 'http://localhost:4090/recipes';
+import data from '../_data/db.json';
 
-const getRecipes = async (): Promise<Recipe[]> => {
-	const response = await fetch(uri);
+// const uri = 'http://localhost:4090/recipes';
 
-	await new Promise(resolve => setTimeout(resolve, 3000));
+// const getRecipes = async (): Promise<Recipe[]> => {
+// 	const response = await fetch(uri);
 
-	const data = await response.json();
-	return data;
-};
+// 	await new Promise(resolve => setTimeout(resolve, 3000));
+
+// 	const data = await response.json();
+// 	return data;
+// };
 
 export default function App() {
 	const [recipes, setRecipes] = useState<Recipe[]>([]);
@@ -22,9 +22,10 @@ export default function App() {
 	useEffect(() => {
 		const fetchRecipes = async () => {
 			try {
-				// setLoading(true);
-				const data = await getRecipes();
-				setRecipes(data);
+				// const data = await getRecipes();
+				const { recipes } = data;
+
+				setRecipes(recipes);
 			} catch (error) {
 				console.error(error);
 			} finally {
@@ -39,7 +40,7 @@ export default function App() {
 		<>
 			<Header />
 			<main>
-				<div className='grid grid-cols-3 gap-8'>{loading ? <Loading /> : <RecipeList recipes={recipes} />}</div>
+				<div className='grid md:grid-cols-3 gap-8'>{loading ? <Loader /> : <RecipeList recipes={recipes} />}</div>
 			</main>
 		</>
 	);

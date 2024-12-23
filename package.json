@@ -7,16 +7,15 @@
 		"dev": "vite",
 		"build": "tsc -b && vite build",
 		"lint": "eslint .",
-		"preview": "vite preview",
-		"server": "json-server --watch _data/db.json --port 4090"
+		"preview": "vite preview"
 	},
 	"dependencies": {
 		"@radix-ui/react-avatar": "^1.1.2",
 		"@radix-ui/react-slot": "^1.1.1",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
-		"json-server": "1.0.0-beta.3",
 		"lucide-react": "^0.469.0",
+		"ninja-recipe-shadcnui": "link:",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
 		"tailwind-merge": "^2.5.5",

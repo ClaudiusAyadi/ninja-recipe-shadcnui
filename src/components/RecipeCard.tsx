@@ -4,7 +4,7 @@ import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Recipe } from '../types';
 
-export default function RecipeCard({ recipe }: { recipe: Recipe }) {
+export const RecipeCard = ({ recipe }: { recipe: Recipe }) => {
 	return (
 		<Card className='flex flex-col justify-between'>
 			<CardHeader className='flex-row gap-4 items-center'>
@@ -30,4 +30,4 @@ export default function RecipeCard({ recipe }: { recipe: Recipe }) {
 			</CardFooter>
 		</Card>
 	);
-}
+};

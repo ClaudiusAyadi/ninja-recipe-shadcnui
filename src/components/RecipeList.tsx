@@ -1,7 +1,7 @@
-import RecipeCard from './RecipeCard';
+import { RecipeCard } from './RecipeCard';
 import { Recipe } from '../types';
 
-export default function RecipeList({ recipes }: { recipes: Recipe[] }) {
+export const RecipeList = ({ recipes }: { recipes: Recipe[] }) => {
 	return (
 		<>
 			{recipes.map(recipe => {
@@ -9,4 +9,4 @@ export default function RecipeList({ recipes }: { recipes: Recipe[] }) {
 			})}
 		</>
 	);
-}
+};

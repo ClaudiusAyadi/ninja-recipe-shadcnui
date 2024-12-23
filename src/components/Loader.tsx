@@ -1,6 +1,6 @@
-import SkeletonCard from './components/SkeletonCard';
+import { SkeletonCard } from './SkeletonCard';
 
-export default function Loading() {
+export const Loader = () => {
 	return (
 		<>
 			{Array.from({ length: 9 }).map((_, index) => (
@@ -8,4 +8,4 @@ export default function Loading() {
 			))}
 		</>
 	);
-}
+};
